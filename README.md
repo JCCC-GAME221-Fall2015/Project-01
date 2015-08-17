@@ -19,24 +19,27 @@ start. Then a 5 second (designer-variable) countdown should ensue (which the pla
 see). After the countdown ends, the player should begin moving again. 
 
 Feel free to add any additional features your team wants. However, if new features are added each 
-team member must each add a feature! 
+team member must each add a feature!
 
-Method Requirements:
-1.	Include debug information only if the game is being run in the unity editor. 
-2.	Include the use of a co-routine. 
-3.	Include the use of an invoke method. 
-4.	Sound(s) should be included where appropriate.
-5.	Designer variables should be fool-proof.
-6.	Designer variables should have appropriate tooltips.
-7.	Include a save mechanic of your choice.
-8.	Each member of the team needs to add at least one method/function to a single script.
+Method Requirements-
 
-Setup:
-Designate a team leader.
-Team leader creates the repository, invites team members to it. 
-Create the TDD.
-Upload the TDD to the repo.
-Upload the TDD to the dropbox. 
-Begin forking and merging.
+1. Include debug information and only show it if the game is being run in the unity editor.
+2. Include the use of a co-routine.
+3. Include the use of an invoke method.
+4. Sound(s) should be included where appropriate.
+5. Designer variables should be "fool-proof"
+6. Designer variables should have appropriate tooltips.
+7. Include a save mechanic of your choice.
+8. Each member of the team needs to add at least one method to a single script from seperate computers.
+ 
+Setup - 
+
+1. Designate a team leader.
+2. Team leader creates repository
+3. Team leader invites team members to edit the repo.
+4. Create the TDD.
+5. Upload the TDD to the repo
+6. Upload the TDD to the dropbox.
+7. Begin forking and merging.
 
 
