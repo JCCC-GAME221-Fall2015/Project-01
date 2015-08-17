@@ -1,7 +1,7 @@
 # Project-01
 Project 01 – Around the World!
 
-Repo Name: Project 01 Around the World!
+Repo Name: Project 01 Around the World <team name>
 
 Your first project is a review project. You will create a 3D space game with a spaceship that can fly 
 around. However, the space ship should not be able to leave the solar system!
