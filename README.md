@@ -35,11 +35,12 @@ Method Requirements-
 Setup - 
 
 1. Designate a team leader.
-2. Team leader creates repository
+2. Team leader forks this repo.
 3. Team leader invites team members to edit the repo.
 4. Create the TDD.
 5. Upload the TDD to the repo
 6. Upload the TDD to the dropbox.
 7. Begin forking and merging.
+8. Turn in the project by creating a pull request to this repo.
 
 
