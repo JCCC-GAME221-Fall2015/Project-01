@@ -29,6 +29,8 @@ public class ScriptGameController : MonoBehaviour {
     [Tooltip("Place your distance from Sun Text object here.")]
     public Text textDistanceSunPlayer;
 
+    [Tooltip("Place your instructions panel here.")]
+    public GameObject panelInstructions;
 
     [Header("Prefab Items")]
     [Tooltip("Place the Player prefab here.")]
@@ -121,7 +123,13 @@ public class ScriptGameController : MonoBehaviour {
     /// </summary>
     public void _Spawn()
     {
-        CancelInvoke("CountDown");
+        if (PlayerPrefs.GetString("HasPlayed") != "YES")
+        {
+            PlayerPrefs.SetString("HasPlayed", "YES");
+            panelInstructions.gameObject.SetActive(true);
+        }
+
+            CancelInvoke("CountDown");
 
         ship = Instantiate(player, spawnPoint.transform.position, Quaternion.identity) as GameObject;
         //set rotation
