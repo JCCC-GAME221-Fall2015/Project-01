@@ -5,6 +5,7 @@ using UnityEngine.UI;
 //@Author:   Andrew Seba
 //@Date:     8/28/2015
 //Description: Holds and controlls ship distance from sun
+//Marshal added code starting at line 96 -Andrew Seba
 public class ScriptGameController : MonoBehaviour {
 
     [Header("Spawn Location")]
@@ -54,7 +55,7 @@ public class ScriptGameController : MonoBehaviour {
         timeLeft = respawnTime;
         textTimeLeft.text = timeLeft.ToString();
 
-
+#if UNITY_EDITOR
         if(player == null) {
             Debug.Log("Player object missing, place ship (player) prefab here.");
         }
@@ -69,9 +70,17 @@ public class ScriptGameController : MonoBehaviour {
         }
 
     }
+# else
 
+        if(sun == null)
+        {
+            sun = GameObject.Find("Sun");
+        }
 
-	void Update () {
+    }
+#endif
+
+    void Update () {
 
         //Gets the distance between the two vectors.
 
@@ -176,29 +185,5 @@ public class ScriptGameController : MonoBehaviour {
         }
         
     }
-
-    //Click to change ship color
-    //Just relized will use invoke for menu popping up to respawn.
-    //IEnumerator WaitForClick()
-    //{
-    //    while (canChangeColors)
-    //    {
-    //        if (Input.GetMouseButton(0))
-    //        {
-    //            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //            RaycastHit[] hits;
-    //            hits = Physics.RaycastAll(ray, 100f);
-
-    //            for (int i = 0; i < hits.Length; i++)
-    //            {
-    //                if (hits[i].collider.gameObject == GameObject.Find("Ship"))
-    //                {
-    //                    hits[i].collider.gameObject.GetComponent<Renderer>().material.SetColor("Color", Color.white);
-    //                }
-    //            }
-    //        }
-    //      yield return null;
-    //    }
-    //}
     
 }
